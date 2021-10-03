@@ -1,0 +1,23 @@
+# The URL the site will be built for
+base_url = "https://PollardMemorialLibraryTrustees.github.io"
+theme = "hyde"
+title = "Pollard Memorial Library Trustees"
+description = "Pollard Memorial Library Trustees Working Docs"
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
+
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+highlight_code = true
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = true
+
+[extra]
+hyde_sticky = false
+hyde_theme = "theme-base-10"
+hyde_user_links = [
+    {url = "https://lab.redhat.com/stratis", name = "Tutorial"},
+    {url = "$BASE_URL/howto", name = "How-To"},
+]
