@@ -39,7 +39,7 @@ test-commit-msg:
 	test "${COMMIT_MSG}"
 
 website-copy: test-website-repo test-commit-msg clean website-distrib
-	# (cd ${WEBSITE_REPO} && git checkout master && test `git status --porcelain | wc -l` = "0" && git ls-files | xargs rm)
+	(cd ${WEBSITE_REPO} && git checkout master && test `git status --porcelain | wc -l` = "0" && git ls-files | xargs rm)
 	(cd ./public; cp * -R ${WEBSITE_REPO})
 	(cd ${WEBSITE_REPO}; git add .; git commit -m "${COMMIT_MSG}")
 

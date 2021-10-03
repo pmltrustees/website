@@ -29,11 +29,6 @@
         {% block sidebar %}
             <div class="sidebar">
                 <div class="container {% if config.extra.hyde_sticky %}sidebar-sticky{% endif %}">
-					<div>
-						<a href="{{ config.base_url }}">
-							<img src="{{ get_url(path="/imgs/stratis_sidebar.png", trailing_slash=false) }}" />
-						</a>
-					</div>
                     <div class="sidebar-about">
                         {% block sidebar_about %}
                             <!-- <a href="{{ config.base_url }}"><h1>{{ config.title }}</h1></a> -->
@@ -43,38 +38,6 @@
                         {% endblock sidebar_about %}
                     </div>
 
-                    User Links:</br>
-                    <ul class="sidebar-nav">
-                        {% block sidebar_user_nav %}
-                        {% for link in config.extra.hyde_user_links %}
-                           <li class="sidebar-nav-item"><a href="{{link.url | replace(from="$BASE_URL", to=config.base_url)}}">{{link.name}}</a></li>
-                        {% endfor %}
-                        {% endblock sidebar_nav %}
-                    </ul>
-                    Developer Links:</br>
-                    <ul class="sidebar-nav">
-                        {% block sidebar_dev_nav %}
-                        {% for link in config.extra.hyde_developer_links %}
-                        <li class="sidebar-nav-item"><a href="{{link.url | replace(from="$BASE_URL", to=config.base_url)}}">{{link.name}}</a></li>
-                        {% endfor %}
-                        {% endblock sidebar_nav %}
-                    </ul>
-                    Contact Links:</br>
-                    <ul class="sidebar-nav">
-                        {% block sidebar_contact_nav %}
-                        {% for link in config.extra.hyde_contact_links %}
-                        <li class="sidebar-nav-item" style="display: inline-block">
-						  <a href="{{link.url | replace(from="$BASE_URL", to=config.base_url)}}">
-						    {% if link.fa %}
-							  <i class="{{link.fa}}"></i>
-							{% else %}
-								{{link.name}}
-							{% endif %}
-					      </a>
-						</li>
-                        {% endfor %}
-                        {% endblock sidebar_nav %}
-                    </ul>
                 </div>
             </div>
         {% endblock sidebar %}
