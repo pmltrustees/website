@@ -1,8 +1,5 @@
 # The URL the site will be built for
-base_url = "https://PollardMemorialLibraryTrustees.github.io"
-theme = "hyde"
-title = "Pollard Memorial Library Trustees"
-description = "Pollard Memorial Library Trustees Working Docs"
+base_url = "https://pmltrustees.github.io"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
@@ -15,9 +12,4 @@ highlight_code = true
 build_search_index = true
 
 [extra]
-hyde_sticky = false
-hyde_theme = "theme-base-10"
-hyde_user_links = [
-    {url = "https://lab.redhat.com/stratis", name = "Tutorial"},
-    {url = "$BASE_URL/howto", name = "How-To"},
-]
+# Put all your custom variables here
