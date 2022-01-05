@@ -20,9 +20,6 @@ yamllint:
 	yamllint --strict .github/workflows/*.yml
 
 check:
-	(cd ./docs/design ; $(MAKE) check)
-	(cd ./docs/dbus ; $(MAKE) check)
-	(cd ./docs/style ; $(MAKE) check)
 	make website-distrib
 
 clean:
